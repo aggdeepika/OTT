@@ -1,0 +1,38 @@
+What is Queue System :- In Simple terms Queue System is that componant of distributed System that manages flow of data in OTT system . As we all know that In OTT system data is most important entity . So it is very necessary to maintain smooth flow of data in OTT system .
+Hence Queue System plays a vital Role in OTT system .By using Queue System we can decouple and scale microservies .
+
+Types of Queue System :- Here I am describing 3 types of queue on that I am working .
+
+1. SQS :- SQS is named for Amazon Simple queue Service .Using SQS, you can send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available.
+SQS offers  two types of Queue :-
+1 . FIFO
+2.  Standard
+
+Working of SQS :- One microservice send messages in queue instead of sending directly to other microservice . Than other microservice receive message and
+do furthur processing (  store in db , data computation ,send to other queue etc).
+The point is to be noted here queue does not work like database ,so user can not select which message to read or to delete but yes .he can choose limit of
+messages in one time .
+
+
+2. RabbitMQ:- RabbitMQ is a message broker . It accepts and forwards messages. It accepts, stores and forwards binary blobs of data ‒ messages.
+There are 3 major componants of RabbitMQ.
+1. Producer :- Producing means to send mesage . The service that sends message to Queue is called producer .
+2. Queue :-    Here RabbitMQ comes in picture . There are routing keys and exchanges through with queues are bind.
+3. Consumer:-  Consuming means to receive message .The service that receive message from Queue is called consumer.
+
+Note:- Same service can work as both producer and consumer And it is not necessary to producer, consumer, and broker  have to reside on the same host.
+
+3. Kafka :-  Apache Kafka is open source publish-subscribe based fault tolerant messaging system. It is fast, scalable and distributed by design.
+Working of Kafka :-
+Producer send messages to to a topic at regular intervals. Kafka broker store all messages equally to all partitions configured for that topic. Consumer subscribe to a specific topic .
+and poll on that topic in regular intervals to see whether there is any message on that topic . If there is any that consumer
+consumes the messages and do furthur processing .
+
+
+Full detailing of each Queue System will be explained in seperate sections .
+
+
+
+
+
+
