@@ -1,0 +1,32 @@
+SNS is Fast, Reliable, flexible,fully managed,Simple push Notification Service Provided by AWS . It allows users to fan out messages in real time with no time delay.
+We see SNS service Example in day to day life .
+Just like we get messages on our email or phone call regarding Flipkart,Amazon or Banking Service .
+
+Components of SNS :-
+
+1. Publisher :- Publisher is that component that publishes messages . Anything that can publish or send message is a publisher .
+eg  Microservices
+2. SNS topic :-  It is a logical access point and communication channel. We create a Topic on our AWS account on which publisher send messages . Subscribers that subsribe to that topic will get message immediately
+send to Topic .
+3. Subscribers :-Subscribers such as Webservers, email address,Amazon SQS queue, AWS Lambda, HTTP/HTTPS receive messages from
+SNS topic by one of the supported protocols .
+
+Working of SNS :-
+Lets take a use case . I need to send messages when there is increase or decrease in interest rate of ICICI Bank .
+For that I will create a topic named as Banking-Interest( as per own choice) .Than I will subscribe all users of bank on that bank (whether by mail id or
+by phone number).
+
+If there will be any change in interest rate that message will send to topic and hence will send to all users on their mail id or phone number .
+
+
+Some Points :-
+1. When a topic is created an ARN is assigned to that topic By AWS . We can relate to ARN like an id provided to topic by AWS.
+2. It is called fully managed as we don't have to manage it .It is managed by AWS itself .
+3. SNS service is used majorly to send messges in bulk .
+4. It is called Reliable as there will be 3 copies of each messages are stored in multiple AZ in same region .
+5. Each topic should have different name as per AWS account.
+
+
+
+
+
